@@ -312,7 +312,7 @@ alırlar.
 - Distribution Through an Event Log : Bu yaklaşımda ise event listenerlar bir sıra yerine bir havuzdan eventleri alırlar. 
 
 
-###Eventual Consistency	
+### Eventual Consistency	
 
 Uygulama genelindeki veriler herhangi bir anda senkronize olmak zorunda değildir ancak en son durumda senkronize bir hale gelirler. DDD içerisinde, domain eventleri bu prensip ile çalışır. Örneğin publisher-subscriber sistemi
 kullanılır ise publisherin veriyi sıraya atması ile event listenerin bu veriyi alması senkronize ilerlemez ancak, doğru kontroller doğrultusunda, sistem en son durumda tutarlı bir yapıya sahip olur. Bu tip bir yapıyı hazırlarken
@@ -498,7 +498,7 @@ public class TaskManager : DomainService, ITaskManager
 ### Factories
 
 
-![image info](./images/factory.png)
+![image info](./images/factory.PNG)
 
 Genelde aggregate oluşturmak için aggregate kökünün constructor metodu yeterlidir. Ancak bazı durumlarda Factory denen yapılara ihtiyaç duyulabilir. Bunlar :
 
@@ -689,8 +689,8 @@ uzunlukta olmaması, içerik için de verilen bir kullanıcı isminin halihazır
 
 ```		
 public class PhoneNumber implements ValueObject {
-private final String phoneNumber;
-public PhoneNumber(String phoneNumber) {
+    private final String phoneNumber;
+    public PhoneNumber(String phoneNumber) {
     Objects.requireNonNull(phoneNumber, "phoneNumber must not be null"); 
     var sb = new StringBuilder();
     char ch;
